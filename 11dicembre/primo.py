@@ -1,5 +1,5 @@
-class ListaConcatenata:
-
+class ListeConcatenate:
+    
     class Nodo:
         val = None
         prossimo = None
@@ -9,12 +9,12 @@ class ListaConcatenata:
 
     def aggiungi(self, n_val):
         if self.test == None:
-            n_nodo = self.nodo
+            n_nodo = self.nodo()
             n_nodo.val = n_val
             self.test = n_nodo
 
         elem = self.test
-        while elem.prossimo is not None:
+        while elem.prossimo != None:
             elem = elem.prossimo
         n_nodo = self.test
         
@@ -30,10 +30,10 @@ class ListaConcatenata:
         return val_corrente
 
 
-lista_conc = ListeConcatenate()
+liste_conc = ListeConcatenate()
 
 for elem in range(10):
-    lista_conc.aggiungi(elem)
+    liste_conc.aggiungi(elem)
 
-for elem in lista_conc:
+for elem in liste_conc:
     print(elem)
